@@ -1,0 +1,15 @@
+.full-width-table {
+  width: 100%;
+}
+
+mat-card {
+  padding: 16px;
+}
+.full-width-table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.full-width {
+  width: 100%;
+}

@@ -1,0 +1,16 @@
+<div class="result-container">
+  <mat-card class="result-card">
+    <mat-card-header>
+      <mat-card-title class="result-title">Subscription Result</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p class="result-message">Please confirm your subscription outcome.</p>
+      <div class="button-group">
+        <button mat-raised-button color="primary" (click)="onSuccess()">✔️ Success</button>
+        <button mat-raised-button color="warn" (click)="onFailed()">❌ Failed</button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+

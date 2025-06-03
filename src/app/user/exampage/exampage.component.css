@@ -1,0 +1,102 @@
+.exam-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #e0f2fe, #c7d2fe);
+}
+
+.subject-panel {
+  width: 250px;
+  background: rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 2px solid #ddd;
+}
+
+.subject-panel h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.exam-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.transparent-title {
+  position: absolute;
+  top: 30px;
+  font-size: 40px;
+  font-weight: bold;
+  color: rgba(30, 64, 175, 0.1);
+  z-index: 0;
+}
+
+.exam-card {
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  z-index: 1;
+}
+
+.exam-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.question-number {
+  font-size: 14px;
+  color: #555;
+}
+
+.question-text {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 24px;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.option-card {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid #d1d5db;
+  text-align: center;
+  font-weight: 500;
+  color: #374151;
+}
+
+.option-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  border-color: #3b82f6;
+}
+
+.option-card.correct {
+  background-color: #d1fae5;
+  border-color: #10b981;
+  color: #065f46;
+}
+
+.option-card.wrong {
+  background-color: #fee2e2;
+  border-color: #ef4444;
+  color: #991b1b;
+}

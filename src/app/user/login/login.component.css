@@ -1,0 +1,52 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;  /* Changed from 100vh to 50vh */
+  background: #f5f5f5;
+  padding: 2rem 0;   /* Added padding for better spacing */
+}
+  
+
+  
+  .login-title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #3f51b5;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .full-width {
+    width: 100%;
+    margin-bottom: 1.10rem;
+  }
+  
+  .login-button {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 0.5rem;
+  }
+  
+  mat-icon {
+    color: rgba(0, 0, 0, 0.54);
+    margin-right: 8px;
+  }
+  .login-container {
+    background-image: url('../../../assets/images/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-card {
+    margin-top: -50px;
+  }

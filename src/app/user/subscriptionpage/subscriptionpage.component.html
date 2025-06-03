@@ -1,0 +1,17 @@
+<div class="subscription-container">
+ <h2 class="student-name-text">Welcome, {{ studentName }}!</h2>
+<h2 class="heading">Choose Your Subscription Plan</h2>
+
+
+  <mat-card class="main-box">
+    <div class="small-box" *ngFor="let plan of subscriptions" (click)="selectPlan(plan)">
+      <div class="box-content">
+        <div class="price">₹{{ plan.price }}</div>
+        <div class="validity">Validity: {{ plan.validity }}</div>
+        <button mat-raised-button color="primary" class="select-btn">
+          Select
+        </button>
+      </div>
+    </div>
+  </mat-card>
+</div>

@@ -1,0 +1,17 @@
+.active {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-left: 4px solid #38bdf8;
+}
+
+mat-sidenav {
+  overflow: hidden;
+}
+
+mat-sidenav-container,
+mat-sidenav-content {
+  height: 100vh;
+}
+
+.ml-72 {
+  margin-left: 18rem; /* match w-72 */
+}

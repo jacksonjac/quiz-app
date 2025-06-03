@@ -1,0 +1,31 @@
+<div class="exam-container">
+  <div class="exam-content">
+    <h2>General Knowledge</h2>
+    <h1 class="transparent-title">Xlent Exam</h1>
+
+    <mat-card class="exam-card">
+      <div class="exam-header">
+        <span class="question-number">Question {{ currentQuestionIndex + 1 }} of {{ questions.length }}</span>
+        <mat-chip color="accent" selected>⏱️ {{ totalTimer }}s</mat-chip>
+      </div>
+
+      <h2 class="question-text">{{ currentQuestion.question }}</h2>
+
+      <div class="options-grid">
+        <mat-card
+          *ngFor="let option of currentQuestion.options"
+          class="option-card"
+          [ngClass]="{
+            'correct': selectedAnswer && option === currentQuestion.correctAnswer,
+            'wrong': selectedAnswer === option && option !== currentQuestion.correctAnswer
+          }"
+          (click)="onOptionSelected(option)"
+        >
+          <mat-card-content>
+            {{ option }}
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </mat-card>
+  </div>
+</div>

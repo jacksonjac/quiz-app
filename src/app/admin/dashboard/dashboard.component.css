@@ -1,0 +1,35 @@
+.dashboard-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.dashboard-card {
+  padding: 16px;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.dashboard-card h2 {
+  font-size: 2.5rem;
+  margin-top: 10px;
+}
+
+/* Box colors */
+.students {
+  background-color: #1e88e5;
+}
+
+.exams {
+  background-color: #43a047;
+}
+
+.pending {
+  background-color: #f9a825;
+}
+
+.completed {
+  background-color: #8e24aa;
+}
