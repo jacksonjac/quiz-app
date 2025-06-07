@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ExamsComponent } from './exams/exams.component';
 import { StudentsComponent } from './students/students.component';
+import { AddNewExamComponent } from './add-new-exam/add-new-exam.component';
 
 
 
@@ -20,7 +21,8 @@ const routes: Routes = [
     children: [
       { path: 'dashboard', component: DashboardComponent },
       {path:'exams',component:ExamsComponent},
-      {path:'students',component:StudentsComponent}
+      {path:'students',component:StudentsComponent},
+      {path:'add_new_exam',component:AddNewExamComponent}
       // add more child routes here
     ]
   }

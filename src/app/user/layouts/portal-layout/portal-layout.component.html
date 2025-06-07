@@ -1,29 +1,35 @@
 <mat-sidenav-container class="layout-container">
   <!-- Sidebar -->
   <mat-sidenav
-    mode="side"
-    opened
+    #sidenav
+    [mode]="isMobile ? 'over' : 'side'"
+    [opened]="!isMobile"
     class="sidebar white-theme"
   >
- <div class="sidebar-header">
-  <img src="https://png.pngtree.com/png-vector/20191110/ourmid/pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg" alt="Profile">
-  <h2>{{ studentName }}</h2>
-</div>
+    <div class="sidebar-header">
+      <img src="https://png.pngtree.com/png-vector/20191110/ourmid/pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg" alt="Profile">
+      <h2>{{ studentName }}</h2>
+    </div>
 
     <nav class="sidebar-nav">
-     <a mat-list-item (click)="goToDashboard()" routerLinkActive="active-link">📊 Dashboard</a>
-
-
+      <a mat-list-item (click)="goToDashboard()" routerLinkActive="active-link">📊 Dashboard</a>
       <a mat-list-item routerLink="exams" routerLinkActive="active-link">📝 Exams</a>
       <a mat-list-item routerLink="results" routerLinkActive="active-link">📄 Results</a>
       <a mat-list-item routerLink="profile" routerLinkActive="active-link">🙍‍♂️ Profile</a>
       <a mat-list-item (click)="logout()">🚪 Logout</a>
-
     </nav>
   </mat-sidenav>
 
-  <!-- Main content -->
+  <!-- Main content area -->
   <mat-sidenav-content class="main-content">
+    <!-- Mobile Top Toolbar -->
+    <mat-toolbar color="primary" *ngIf="isMobile" class="mobile-toolbar">
+      <button mat-icon-button (click)="toggleSidenav()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span class="toolbar-title">Student Dashboard</span>
+    </mat-toolbar>
+
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

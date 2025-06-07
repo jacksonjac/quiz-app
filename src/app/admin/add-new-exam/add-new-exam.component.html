@@ -1,1 +1,31 @@
-<p>add-new-exam works!</p>
+<div class="exam-form-container mat-elevation-z4">
+  <h2 class="form-title">Create New Exam</h2>
+
+  <form [formGroup]="examForm" (ngSubmit)="onSubmit()">
+    <div class="form-grid">
+      <mat-form-field appearance="outline">
+        <mat-label>Exam Name</mat-label>
+        <input matInput formControlName="examName" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Subject</mat-label>
+        <input matInput formControlName="subject" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Duration</mat-label>
+        <input matInput formControlName="duration" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Question Count</mat-label>
+        <input type="number" matInput formControlName="questionCount" required />
+      </mat-form-field>
+    </div>
+
+    <button mat-raised-button color="primary" type="submit" class="submit-btn" [disabled]="examForm.invalid">
+      Create Exam
+    </button>
+  </form>
+</div>
