@@ -14,8 +14,8 @@
     <nav class="sidebar-nav">
       <a mat-list-item (click)="goToDashboard()" routerLinkActive="active-link">📊 Dashboard</a>
       <a mat-list-item routerLink="exams" routerLinkActive="active-link">📝 Exams</a>
-      <a mat-list-item routerLink="results" routerLinkActive="active-link">📄 Results</a>
-      <a mat-list-item routerLink="profile" routerLinkActive="active-link">🙍‍♂️ Profile</a>
+      <a mat-list-item  routerLinkActive="active-link">📄 Results</a>
+      <a mat-list-item  routerLinkActive="active-link">🙍‍♂️ Profile</a>
       <a mat-list-item (click)="logout()">🚪 Logout</a>
     </nav>
   </mat-sidenav>
@@ -27,7 +27,7 @@
       <button mat-icon-button (click)="toggleSidenav()">
         <mat-icon>menu</mat-icon>
       </button>
-      <span class="toolbar-title">Student Dashboard</span>
+      <span class="">Student Dashboard</span>
     </mat-toolbar>
 
     <router-outlet></router-outlet>
